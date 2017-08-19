@@ -4,7 +4,13 @@
 
 為什麼我會把這三個特別拿出來講呢 ？ 因為他會影響到你設計資料庫，更影響到你的整體架構。
 
-* [Youtube Tutorial]()
+* [Youtube Tutorial - part1](https://youtu.be/b2W7aJjbbC0)
+
+* [Youtube Tutorial - OneToOneField - part2](https://youtu.be/tYV2pmpTGEU)
+
+* [Youtube Tutorial - ForeignKey - part3](https://youtu.be/1RkipG5YQO0)
+
+* [Youtube Tutorial - ManyToManyField - part4](https://youtu.be/f3YZIHUTzMg)
 
 建議對 [Django](https://github.com/django/django) 不熟悉的朋友，可以先觀看我之前寫的文章（ 先認識一下 [Django](https://github.com/django/django) ）
 
@@ -26,7 +32,7 @@ pip install django
 
 ## 教學
 
-我們先透過 OneToOneField_tutorial 來認識基本的流程，所以請將 [settings.py]() 裡的 INSTALLED_APPS修改一下，修改如下
+我們先透過 OneToOneField_tutorial 來認識基本的流程，所以請將 [settings.py](https://github.com/twtrubiks/django-field-tutorial/blob/master/django_field_tutorial/settings.py) 裡的 INSTALLED_APPS修改一下，修改如下
 
 ```python
 INSTALLED_APPS = [
@@ -42,7 +48,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-在 OneToOneField_tutorial 的 [models.py]() 裡，有我們事先寫好的 model，
+在 OneToOneField_tutorial 的 [models.py](https://github.com/twtrubiks/django-field-tutorial/blob/master/OneToOneField_tutorial/models.py) 裡，有我們事先寫好的 model，
 
 我們先 makemigrations
 
@@ -101,9 +107,9 @@ python manage.py migrate
 
 [https://docs.djangoproject.com/en/1.11/ref/models/fields/#django.db.models.OneToOneField](https://docs.djangoproject.com/en/1.11/ref/models/fields/#django.db.models.OneToOneField)
 
-在 OneToOneField_tutorial 的 [models.py]() 裡，有我們事先寫好的 model，
+在 OneToOneField_tutorial 的 [models.py](https://github.com/twtrubiks/django-field-tutorial/blob/master/OneToOneField_tutorial/models.py) 裡，有我們事先寫好的 model，
 
- [models.py]() 裡面的程式碼如下
+ [models.py](https://github.com/twtrubiks/django-field-tutorial/blob/master/OneToOneField_tutorial/models.py) 裡面的程式碼如下
 
 ```python
 class Profile(models.Model):
@@ -124,7 +130,7 @@ Django 的 User Model 預設已經有一些存在的 field ，但很多時候我
 
 常常需要增加一些額外的資料，像是需要記錄使用者的生日，這時候
 
-OneToOneField 就派上用場了。建立一個Profile 的 model，透過 
+OneToOneField 就派上用場了。建立一個Profile 的 model，透過
 
 OneToOneField 和 User Model 建立一對一的關係。
 
@@ -183,9 +189,9 @@ ForeignKey 官方文件的參考
 
 [https://docs.djangoproject.com/en/1.11/ref/models/fields/#django.db.models.ForeignKey](https://docs.djangoproject.com/en/1.11/ref/models/fields/#django.db.models.ForeignKey)
 
-在 ForeignKey_tutorial 的 [models.py]() 裡，有我們事先寫好的 model，
+在 ForeignKey_tutorial 的 [models.py](https://github.com/twtrubiks/django-field-tutorial/blob/master/ForeignKey_tutorial/models.py) 裡，有我們事先寫好的 model，
 
- [models.py]() 裡面的程式碼如下
+ [models.py](https://github.com/twtrubiks/django-field-tutorial/blob/master/ForeignKey_tutorial/models.py) 裡面的程式碼如下
 
 ```python
 
@@ -289,9 +295,9 @@ new_article.reporter
 
 [https://docs.djangoproject.com/en/1.11/ref/models/fields/#django.db.models.ManyToManyField](https://docs.djangoproject.com/en/1.11/ref/models/fields/#django.db.models.ManyToManyField)
 
-在 ManyToManyField 的 [models.py]() 裡，有我們事先寫好的 model，
+在 ManyToManyField 的 [models.py](https://github.com/twtrubiks/django-field-tutorial/blob/master/ManyToManyField_tutorial/models.py) 裡，有我們事先寫好的 model，
 
- [models.py]() 裡面的程式碼如下
+ [models.py](https://github.com/twtrubiks/django-field-tutorial/blob/master/ManyToManyField_tutorial/models.py) 裡面的程式碼如下
 
 ```python
 
@@ -308,9 +314,7 @@ class Image(models.Model):
 
 以上面這個例子來說，我們建立一個 Image model ，一張圖片可以有很多使用者喜歡，
 
-而一個使用者也可以喜歡多張圖片，所以他們是 ***多對多（ many-to-many ）*** 的關
-
-係。
+而一個使用者也可以喜歡多張圖片，所以他們是 ***多對多（ many-to-many ）*** 的關係。
 
 當你建立多對多（ many-to-many ）的關係時，你會發現被多建立一張表，這張表是用來
 
