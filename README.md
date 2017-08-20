@@ -1,5 +1,7 @@
 # django-field-tutorial
 
+Django ORM and Relationship Field
+
 認識 [Django](https://www.djangoproject.com/)  **OneToOneField** , **ForeignKey** ,**ManyToManyField**  📝
 
 為什麼我會把這三個特別拿出來講呢 ？ 因為他會影響到你設計資料庫，更影響到你的整體架構。
@@ -130,9 +132,9 @@ Django 的 User Model 預設已經有一些存在的 field ，但很多時候我
 
 常常需要增加一些額外的資料，像是需要記錄使用者的生日，這時候
 
-OneToOneField 就派上用場了。建立一個Profile 的 model，透過
+OneToOneField 就派上用場了。建立一個 Profile 的 model，透過
 
-OneToOneField 和 User Model 建立一對一的關係。
+OneToOneField 和 User Model 建立 ***一對一 （ one-to-one ）*** 的關係。
 
 我在再透過 python console 來把玩一下，
 
